@@ -1,0 +1,32 @@
+{
+    "etrade": {
+	    "oauth": {
+	    	"token": {
+				    "requesttoken":	"https://etws.etrade.com/oauth/request_token",
+				    "accesstoken":	"https://etws.etrade.com/oauth/access_token",
+				    "renewtoken": 	"https://etws.etrade.com/oauth/renew_access_token",
+				    "authorize": 	"https://us.etrade.com/e/t/etws/authorize",
+				    "revokeaccesstoken": "https://etws.etrade.com/oauth/revoke_access_token"
+		    }			
+	    },
+	    "prod":{
+		    "accounts":{
+			    "list": "https://etws.etrade.com/accounts/rest/accountlist.json",
+			    "balance": "https://etws.etrade.com/accounts/rest/accountbalance/{accountId}.json",
+			    "positions": "https://etws.etrade.com/accounts/rest/accountpositions/{accountId}.json",
+			    "transactionhistory": "https://etws.etrade.com/accounts/rest/{accountId}/transactions.json",
+			    "transactiondetails": "https://etws.etrade.com/accounts/rest/{accountId}/transactions/{transactionId}.json"
+			    
+		    }
+	    },
+	    "sandbox":{
+		    "accounts":{
+			    "list": "https://etwssandbox.etrade.com/accounts/sandbox/rest/accountlist.json",
+			    "balance": "https://etwssandbox.etrade.com/accounts/sandbox/rest/accountbalance/{accountId}.json",
+			    "positions": "https://etwssandbox.etrade.com/accounts/sandbox/rest/accountpositions/{accountId}.json",
+			    "transactionhistory": "https://etwssandbox.etrade.com/accounts/sandbox/rest/{accountId}/transactions.json",			    
+			    "transactiondetails": "https://etwssandbox.etrade.com/accounts/sandbox/rest/{accountId}/transactions/{transactionId}.json"
+		    }
+	    }    
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "oauthtimeout": {
+    	"code": "100",
+    	"message": "OAuth could not connect. Has it timed out?"
+    }
+}
