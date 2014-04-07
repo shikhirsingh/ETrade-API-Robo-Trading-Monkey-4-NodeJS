@@ -68,7 +68,9 @@ exports.etradeCallback = function (req, res){
 			req.session.oauth_access_token = oauth_access_token;
 			req.session.oauth_access_token_secret = oauth_access_token_secret;
 			
-			global.oauth=req.session.oa;
+			//global.oauth=req.session.oa;
+			global.oauth=oa;
+
 			global.oauth.oauth_access_token = oauth_access_token;
 			global.oauth.oauth_access_token_secret = oauth_access_token_secret;
 			

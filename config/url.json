@@ -16,7 +16,10 @@
 			    "positions": "https://etws.etrade.com/accounts/rest/accountpositions/{accountId}.json",
 			    "transactionhistory": "https://etws.etrade.com/accounts/rest/{accountId}/transactions.json",
 			    "transactiondetails": "https://etws.etrade.com/accounts/rest/{accountId}/transactions/{transactionId}.json"
-			    
+		    },
+		    "market":{
+			    "productlookup": "https://etws.etrade.com/market/rest/productlookup.json",
+			    "getQuote": "https://etws.etrade.com/market/rest/quote/{symbol}.json"
 		    }
 	    },
 	    "sandbox":{
@@ -26,6 +29,10 @@
 			    "positions": "https://etwssandbox.etrade.com/accounts/sandbox/rest/accountpositions/{accountId}.json",
 			    "transactionhistory": "https://etwssandbox.etrade.com/accounts/sandbox/rest/{accountId}/transactions.json",			    
 			    "transactiondetails": "https://etwssandbox.etrade.com/accounts/sandbox/rest/{accountId}/transactions/{transactionId}.json"
+		    },
+		    "market":{
+			    "productlookup": "https://etwssandbox.etrade.com/market/sandbox/rest/productlookup.json",
+			    "getQuote": "https://etwssandbox.etrade.com/market/sandbox/rest/quote/{symbol}.json"			    
 		    }
 	    }    
     }

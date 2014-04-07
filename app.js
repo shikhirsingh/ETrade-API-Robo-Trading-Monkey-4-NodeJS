@@ -8,7 +8,8 @@ var credential = require('./config/credential')
 	, app = express()
 	, path = require('path')
 	, http = require('http')
-	, accountWeb = require('./routes/accountWeb')	
+	, accountWeb = require('./routes/accountWeb')
+	, marketWeb =  require('./routes/marketWeb')
 	, login = require('./routes/login');
 
 GLOBAL.debug = true;
@@ -18,6 +19,7 @@ GLOBAL.server = "sandbox"; // VALID values are "sandbox" or "prod"
 
 var randomLetters = (Math.random() + 1).toString(36).substring(2,30); // generates random letters necessary for session and cookies
 
+app.enable("jsonp callback"); // doesn't seem to work
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3001);
@@ -55,7 +57,11 @@ app.all('/oauth/etrade/callback', login.etradeCallback);
 app.all('/accounts/listAccounts', accountWeb.listAccounts);
 app.all('/account/balance', accountWeb.accountBalance);
 app.all('/account/positions', accountWeb.accountPositions);
+app.all('/account/transactions/history', accountWeb.transactionsHistory);
+app.all('/account/transactions/details', accountWeb.transactionsDetails);
 
+app.all('/market/productlookup', marketWeb.productlookup);
+app.all('/market/quote', marketWeb.getQuote);
 
 
 http.createServer(app).listen(app.get('port'), function(){
