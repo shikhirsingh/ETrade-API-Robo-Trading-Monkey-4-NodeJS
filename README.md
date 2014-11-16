@@ -13,7 +13,7 @@ IMHO, given the async nature and event loop architecture of Node.js, it is the b
 
 **Dependencies**
 
-1. Node JS
+1. [Node JS](http://nodejs.org/)
 2. ETrade OAuth Credentials - obtain this from ETrade by contacting them via secure message prior to install steps
 3. E*Trade Brokerage Account
 
